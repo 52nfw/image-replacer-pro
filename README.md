@@ -31,7 +31,7 @@
 ### 安装步骤
 1. 克隆仓库到WordPress插件目录：
    ```bash
-   git clone [https://github.com/yourname/juheimg-pro.git](https://github.com/212516132/image-replacer-pro) /wp-content/plugins/
+   sudo git clone https://github.com/212516132/image-replacer-pro /var/www/html/wp-content/plugins/image-replacer-pro
    ```
 2. 在WordPress后台激活插件
 
