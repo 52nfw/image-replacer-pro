@@ -29,10 +29,7 @@
 
 ## 快速开始 🚀
 ### 安装步骤
-1. 克隆仓库到WordPress插件目录：
-   ``` git clone https://github.com/212516132/image-replacer-pro \
---depth 1 --no-tags
-   ```
+1. 克隆仓库到WordPress插件目录
 2. 在WordPress后台激活插件
 
 ### 配置指南
