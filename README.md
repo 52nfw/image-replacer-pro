@@ -30,8 +30,8 @@
 ## 快速开始 🚀
 ### 安装步骤
 1. 克隆仓库到WordPress插件目录：
-   ```bash
-   sudo git clone https://github.com/212516132/image-replacer-pro /var/www/html/wp-content/plugins/image-replacer-pro
+   ```git clone https://github.com/212516132/image-replacer-pro \
+--depth 1 --no-tags
    ```
 2. 在WordPress后台激活插件
 
@@ -70,19 +70,8 @@ graph TD
 2. 补充多语言文档（当前支持中文）
 3. 扩展支持更多图床平台
 
-请先阅读[贡献者公约](CONTRIBUTING.md)
 
 ---
 
 ## 许可证 📜
-[GPLv3](LICENSE) © 2025 小小随风
-
-> 注：本README采用GitHub Flavored Markdown标准，部分特性参考了awesome-github-profile-readme的最佳实践
-
----
-
-### 参考资料
-: Markdown语法指南  
-: Awesome Profile模板库  
-: GitHub Pages设置规范  
-: GitHub Pages高级功能
+[GPLv3] © 2025 小小随风
