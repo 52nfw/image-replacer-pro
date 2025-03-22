@@ -8,7 +8,7 @@
 
 ## 核心功能 🔥
 1. **智能检测替换**  
-   正则表达式驱动的内容扫描引擎，支持多域名白名单配置（`www.xianzhidaquan.com`等）
+   正则表达式驱动的内容扫描引擎，支持多域名白名单配置（`www.baidu.com`等）
    
 2. **多平台对接**  
    深度集成聚合图床API，支持：
@@ -23,7 +23,6 @@
    ```
 
 4. **可视化进度监控**  
-   ![处理进度示例](https://via.placeholder.com/600x200?text=实时进度+统计图表)  
    包含成功率统计、剩余任务量预测等关键指标
 
 ---
@@ -32,7 +31,7 @@
 ### 安装步骤
 1. 克隆仓库到WordPress插件目录：
    ```bash
-   git clone https://github.com/yourname/juheimg-pro.git /wp-content/plugins/
+   git clone [https://github.com/yourname/juheimg-pro.git](https://github.com/212516132/image-replacer-pro) /wp-content/plugins/
    ```
 2. 在WordPress后台激活插件
 
@@ -87,8 +86,3 @@ graph TD
 : Awesome Profile模板库  
 : GitHub Pages设置规范  
 : GitHub Pages高级功能
-
-建议添加以下增强元素：
-1. 通过[github-readme-stats](https://github.com/anuraghazra/github-readme-stats)添加实时统计卡片
-2. 使用[shields.io](https://shields.io/)创建更多状态徽章
-3. 在GitHub Pages中部署[在线演示](https://pages.github.com/)
