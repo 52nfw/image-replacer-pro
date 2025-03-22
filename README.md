@@ -6,8 +6,6 @@
 ![GitHub stars](https://img.shields.io/github/stars/yourname/juheimg-pro) 
 ![WordPress Version](https://img.shields.io/wordpress/plugin/v/juheimg-pro)
 
-👉 [立即体验](https://demo.yourdomain.com) | 📖 [文档中心](docs/) | 🐞 [问题反馈](issues/)
-
 ## 核心功能 🔥
 1. **智能检测替换**  
    正则表达式驱动的内容扫描引擎，支持多域名白名单配置（`www.xianzhidaquan.com`等）
