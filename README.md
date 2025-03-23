@@ -5,7 +5,7 @@
 
 ## 核心功能 🔥
 1. **智能检测替换**  
-   正则表达式驱动的内容扫描引擎，支持多域名白名单配置（`www.baidu.com`等）
+   正则表达式驱动的内容扫描引擎，支持域名白名单配置如（`www.baidu.com`）
    
 2. **多平台对接**  
    深度集成聚合图床API，支持：
@@ -68,4 +68,4 @@ graph TD
 ---
 
 ## 许可证 📜
-[GPLv3] © 2025 小小随风
+[GPLv3](https://www.gnu.org/licenses/gpl-3.0.html#license-text)© 2025 小小随风
