@@ -68,4 +68,4 @@ graph TD
 ---
 
 ## 许可证 📜
-[GPLv3](https://www.gnu.org/licenses/gpl-3.0.html#license-text)© 2025 小小随风
+[GPLv3](https://github.com/52nfw/image-replacer-pro?tab=GPL-3.0-1-ov-file#readme)© 2025 小小随风
