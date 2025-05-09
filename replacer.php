@@ -2,7 +2,7 @@
 /*
 Plugin Name: 聚合图床 Pro
 Plugin URI: https://www.52nfw.cn/
-Description: 聚合图床手动检测指定链接上传到图床并替换工具
+Description: 聚合图床自动检测指定链接上传到图床并替换工具
 Version: 2.1.0
 Author: 小小随风
 */
@@ -10,12 +10,12 @@ Author: 小小随风
 if (!defined('ABSPATH')) exit;
 
 // 核心配置
-define('XIR_PER_PAGE', 20);
-define('XIR_API_TIMEOUT', 10); // API超时时间
-define('XIR_REGEX_CACHE_KEY', 'xir_compiled_regex');
+define('XIR_PER_PAGE'， 20);
+define('XIR_API_TIMEOUT'， 10); // API超时时间
+define('XIR_REGEX_CACHE_KEY'， 'xir_compiled_regex');
 
 // 注册管理菜单
-add_action('admin_menu', function() {
+add_action('admin_menu'， function() {
     add_options_page(
         '图片替换设置',
         '图片替换设置',
@@ -26,7 +26,7 @@ add_action('admin_menu', function() {
 });
 
 // 安装/卸载处理
-register_activation_hook(__FILE__, function() {
+register_activation_hook(__FILE__， function() {
     // 安全文件
     file_put_contents(plugin_dir_path(__FILE__).'.htaccess', "Deny from all");
     
