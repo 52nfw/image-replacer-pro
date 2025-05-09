@@ -2,8 +2,8 @@
 /*
 Plugin Name: 聚合图床 Pro
 Plugin URI: https://www.52nfw.cn/
-Description: 聚合图床手动检测指定链接上传到图床并替换工具（高性能版）
-Version: 2.0
+Description: 聚合图床手动检测指定链接上传到图床并替换工具
+Version: 2.1.0
 Author: 小小随风
 */
 
@@ -34,6 +34,8 @@ register_activation_hook(__FILE__, function() {
     add_option('xir_target_domains', 'www.52nfw.cn', '', 'no');
     add_option('xir_api_token', '', '', 'no');
     add_option('xir_watermark', 0, '', 'no');
+    add_option('xir_compress', 0, '', 'no');
+    add_option('xir_webp', 0, '', 'no');
     add_option('xir_categories', '', '', 'no');
     
     // 预编译正则
@@ -93,6 +95,26 @@ function xir_pro_settings_page() {
                             <input type="checkbox" name="watermark" 
                                 <?php checked(get_option('xir_watermark'), 1); ?>>
                             启用图片水印
+                        </label>
+                    </td>
+                </tr>
+                <tr>
+                    <th><label>压缩设置</label></th>
+                    <td>
+                        <label>
+                            <input type="checkbox" name="compress" 
+                                <?php checked(get_option('xir_compress'), 1); ?>>
+                            启用压缩（覆盖用户中心默认设置）
+                        </label>
+                    </td>
+                </tr>
+                <tr>
+                    <th><label>WebP转换</label></th>
+                    <td>
+                        <label>
+                            <input type="checkbox" name="webp" 
+                                <?php checked(get_option('xir_webp'), 1); ?>>
+                            强制转为WebP格式（覆盖用户中心默认设置）
                         </label>
                     </td>
                 </tr>
@@ -269,6 +291,8 @@ function xir_upload_image($url) {
             'token'     => get_option('xir_api_token'),
             'src'       => $url,
             'watermark' => get_option('xir_watermark') ? 'true' : 'false',
+            'compress'  => get_option('xir_compress') ? 'true' : 'false',
+            'webp'      => get_option('xir_webp') ? 'true' : 'false',
             'categories'=> get_option('xir_categories')
         ]
     ];
@@ -337,6 +361,8 @@ function xir_pro_handle_form_submit() {
     update_option('xir_target_domains', implode(',', $domains), 'no');
     update_option('xir_api_token', sanitize_text_field($_POST['api_token']), 'no');
     update_option('xir_watermark', isset($_POST['watermark']) ? 1 : 0, 'no');
+    update_option('xir_compress', isset($_POST['compress']) ? 1 : 0, 'no');
+    update_option('xir_webp', isset($_POST['webp']) ? 1 : 0, 'no');
     update_option('xir_categories', sanitize_text_field($_POST['categories']), 'no');
     
     // 更新正则表达式
@@ -349,6 +375,9 @@ function xir_pro_handle_form_submit() {
 add_action('wp_enqueue_scripts', function() {
     if (!is_admin()) {
         remove_action('wp_head', 'xir_pro_settings_page');
+        wp_dequeue_style('dashicons');
+    }
+}, 999);
         wp_dequeue_style('dashicons');
     }
 }, 999);
