@@ -31,7 +31,7 @@ register_activation_hook(__FILE__, function() {
     file_put_contents(plugin_dir_path(__FILE__).'.htaccess', "Deny from all");
     
     // 初始化配置（禁用自动加载）
-    add_option('xir_target_domains', 'www.xianzhidaquan.com', '', 'no');
+    add_option('xir_target_domains', 'www.52nfw.cn', '', 'no');
     add_option('xir_api_token', '', '', 'no');
     add_option('xir_watermark', 0, '', 'no');
     add_option('xir_categories', '', '', 'no');
